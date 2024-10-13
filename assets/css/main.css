@@ -730,6 +730,7 @@ input, select, textarea {
 			position: relative;
 			padding-top: 25px;
 			margin: auto;
+			border-radius: 4px;
 		}
 		
 		/* Hide the images by default */
