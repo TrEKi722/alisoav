@@ -427,33 +427,63 @@ function showSlides(n, no) {
 }
 */
 
-let slideIndex = [1,1];
-/* Class the members of each slideshow group with different CSS classes */
-let slideId = ["mySlides1", "mySlides2"];
-showSlidesAudio();
-showSlidesLighting();
+// let slideIndex = [1,1];
+// /* Class the members of each slideshow group with different CSS classes */
+// let slideId = ["mySlides1", "mySlides2"];
+// showSlidesAudio();
+// showSlidesLighting();
 
-function showSlidesAudio() {
+// function showSlidesAudio() {
+//   let i;
+//   let x = document.getElementsByClassName("mySlides1");
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";
+//   }
+//   slideIndex[1]++;
+//   if (slideIndex[1] > x.length) {slideIndex[1] = 1}
+//   x[slideIndex[1]-1].style.display = "block";
+//   setTimeout(showSlidesAudio, 10000); // Change image every 2 seconds
+// }
+
+// function showSlidesLighting() {
+//   let j;
+//   let slides = document.getElementsByClassName("mySlides2");
+//   for (j = 0; j < slides.length; j++) {
+//     slides[j].style.display = "none";
+//   }
+//   slideIndex[2]++;
+//   if (slideIndex[2] > slides.length) {slideIndex[2] = 1}
+//   slides[slideIndex[2]-1].style.display = "block";
+//   setTimeout(showSlidesLighting, 10000); // Change image every 2 seconds
+// }
+
+let slideIndexes = [0, 0]; // Separate slide index for each slideshow
+let slideClasses = ["mySlides1", "mySlides2"]; // Separate class names for each slideshow
+let timers = [null, null]; // Timers for each slideshow
+
+function showSlides(slideshowIndex) {
   let i;
-  let x = document.getElementsByClassName("mySlides1");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  let slides = document.getElementsByClassName(slideClasses[slideshowIndex]);
+  
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-  slideIndex[1]++;
-  if (slideIndex[1] > slides.length) {slideIndex[1] = 1}
-  x[slideIndex[1]-1].style.display = "block";
-  setTimeout(showSlidesAudio, 10000); // Change image every 2 seconds
+  
+  slideIndexes[slideshowIndex]++;
+  if (slideIndexes[slideshowIndex] > slides.length) {
+    slideIndexes[slideshowIndex] = 1;
+  }
+  
+  slides[slideIndexes[slideshowIndex] - 1].style.display = "block";
+  
+  // Reset timer for the specific slideshow
+  clearTimeout(timers[slideshowIndex]);
+  timers[slideshowIndex] = setTimeout(function() {
+    showSlides(slideshowIndex);
+  }, 2000);
 }
 
-function showSlidesLighting() {
-  let j;
-  let slides = document.getElementsByClassName("mySlides2");
-  for (j = 0; j < slides.length; j++) {
-    slides[j].style.display = "none";
-  }
-  slideIndex[2]++;
-  if (slideIndex[2] > slides.length) {slideIndex[2] = 1}
-  slides[slideIndex[2]-1].style.display = "block";
-  setTimeout(showSlidesLighting, 10000); // Change image every 2 seconds
-}
+// Initialize both slideshows
+showSlides(0); // First slideshow
+showSlides(1); // Second slideshow
 
