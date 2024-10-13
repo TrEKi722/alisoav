@@ -400,6 +400,7 @@
 
 })(jQuery);
 
+// Slideshows
 
 /*
 // Slideshows
@@ -429,19 +430,30 @@ function showSlides(n, no) {
 let slideIndex = [1,1];
 /* Class the members of each slideshow group with different CSS classes */
 let slideId = ["mySlides1", "mySlides2"];
-showSlides(1, 0);
-showSlides(1, 1);
+showSlidesAudio();
+showSlidesLighting();
 
-
-function showSlides(n,no) {
+function showSlidesAudio() {
   let i;
-  let slides = document.getElementsByClassName(slideId[no]);
+  let slides = document.getElementsByClassName("mySlides1");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slideIndex[no]++;
-  if (slideIndex[no] > slides.length) {slideIndex[no] = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 10000); // Change image every 10 seconds
+  slideIndex[1]++;
+  if (slideIndex[1] > slides.length) {slideIndex[1] = 1}
+  slides[slideIndex[1]-1].style.display = "block";
+  setTimeout(showSlidesAudio, 10000); // Change image every 2 seconds
+}
+
+function showSlidesLighting() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides2");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex[2]++;
+  if (slideIndex[2] > slides.length) {slideIndex[2] = 1}
+  slides[slideIndex[2]-1].style.display = "block";
+  setTimeout(showSlidesLighting, 10000); // Change image every 2 seconds
 }
 
