@@ -726,9 +726,10 @@ input, select, textarea {
 		
 		/* Slideshow container */
 		.slideshow-container {
-		  max-width: 1000px;
-		  position: relative;
-		  margin: 25px;
+			max-width: 1000px;
+			position: relative;
+			padding-top: 25px;
+			margin: auto;
 		}
 		
 		/* Hide the images by default */
