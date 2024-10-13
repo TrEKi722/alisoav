@@ -420,5 +420,5 @@ function showSlides(n, no) {
 		x[i].style.display = "none";
 	}
 	x[slideIndex[no]-1].style.display = "block";
-	setTimeout(showSlides, 10000);  // Change image every 10 seconds
+	setTimeout(showSlides(n,no), 10000);  // Change image every 10 seconds
 }
