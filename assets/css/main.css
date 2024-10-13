@@ -732,10 +732,15 @@ input, select, textarea {
 		}
 		
 		/* Hide the images by default */
-		.mySlides {
+		.mySlides1 {
 		  display: none;
 		}
-		
+
+		/* Hide the images by default */
+		.mySlides2 {
+		  display: none;
+		}
+
 		/* Fading animation */
 		.fade {
 		  animation-name: fade;
