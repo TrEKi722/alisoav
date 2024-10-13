@@ -435,21 +435,21 @@ showSlidesLighting();
 
 function showSlidesAudio() {
   let i;
-  let slides = document.getElementsByClassName("mySlides1");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  let x = document.getElementsByClassName("mySlides1");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
   }
   slideIndex[1]++;
   if (slideIndex[1] > slides.length) {slideIndex[1] = 1}
-  slides[slideIndex[1]-1].style.display = "block";
+  x[slideIndex[1]-1].style.display = "block";
   setTimeout(showSlidesAudio, 10000); // Change image every 2 seconds
 }
 
 function showSlidesLighting() {
-  let i;
+  let j;
   let slides = document.getElementsByClassName("mySlides2");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  for (j = 0; j < slides.length; j++) {
+    slides[j].style.display = "none";
   }
   slideIndex[2]++;
   if (slideIndex[2] > slides.length) {slideIndex[2] = 1}
