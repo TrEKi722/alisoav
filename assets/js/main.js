@@ -400,9 +400,11 @@
 
 })(jQuery);
 
+
+/*
 // Slideshows
 let slideIndex = [1,1];
-/* Class the members of each slideshow group with different CSS classes */
+// Class the members of each slideshow group with different CSS classes 
 let slideId = ["mySlides1", "mySlides2"]
 showSlides(1, 0);
 showSlides(1, 1);
@@ -422,3 +424,24 @@ function showSlides(n, no) {
 	x[slideIndex[no]-1].style.display = "block";
 	setTimeout(showSlides(n,no), 10000);  // Change image every 10 seconds
 }
+*/
+
+let slideIndex = [1,1];
+/* Class the members of each slideshow group with different CSS classes */
+let slideId = ["mySlides1", "mySlides2"];
+showSlides(1, 0);
+showSlides(1, 1);
+
+
+function showSlides(n,no) {
+  let i;
+  let slides = document.getElementsByClassName(slideId[no]);
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex[no]++;
+  if (slideIndex[no] > slides.length) {slideIndex[no] = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 10000); // Change image every 10 seconds
+}
+
