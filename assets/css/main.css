@@ -728,20 +728,22 @@ input, select, textarea {
 		.slideshow-container {
 			max-width: 1000px;
 			position: relative;
-			padding-top: 25px;
 			margin: auto;
+			margin-top:25px;
 			border-radius: 4px;
 		}
 		
 		/* Hide the images by default */
 		.mySlides1 {
 			display: none;
+			margin-top:25px;
 			border-radius: 4px;
 		}
 
 		/* Hide the images by default */
 		.mySlides2 {
 			display: none;
+			margin-top: 0px;
 			padding-top: 0px;
 			border-radius: 4px;
 		}
