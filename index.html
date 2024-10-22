@@ -34,7 +34,7 @@
 								<li><a href="#audio">Audio</a></li>
 								<li><a href="#lights">Lighting</a></li>
 								<li><a href="#FX">Special Effects</a></li>
-								<li><a href="#wwd">What We Do</a></li>
+								<!-- <li><a href="#wwd">What We Do</a></li> -->
 								<li><a href="#about">About</a></li>
 								<li><a href="#contact">Contact</a></li>
 							</ul>
@@ -101,10 +101,22 @@
 						<!-- About -->
 							<article id="about">
 								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+
+								<nav>
+									<ul>
+										<li><input type="button" onClick="document.getElementById('mission').scrollIntoView();"/>Mission Statement</li>
+										<li><input type="button" onClick="document.getElementById('wwd2').scrollIntoView();"/>What We Do</li>
+										<li><input type="button" onClick="document.getElementById('founders').scrollIntoView();"/>Founders</li>
+									</ul>
+								</nav>
+								<span class="image main" id="mission"><img src="images/pic03.jpg" alt="" /></span>
 								<p>Aliso AV is based out of Aliso Niguel High School's ASB media department in Aliso Viejo, CA. We serve our Aliso area schools and surrounding communities.</p>
 								<p>Our mission is to deliver high-quality event experiences regardless of financial means. We are committed to providing reasonable cost options, ensuring that everyone can participate in and enjoy the excellence we offer. Through innovation, we aim to maintain the highest standards in our productions.</p>
-								<h2 class="major">Founders</h2>
+								
+								<h2 class="major" id="wwd2">What We Do</h2>
+								<p>At Aliso AV, we specialize in creating unforgettable event experiences with our focus on crowd engagement and creative design. We provide complete event production services, working closely with clients to ensure every show is customized to their vision. Whether it’s a high-energy school dance or a carefully planned show, our goal is to elevate the atmosphere and leave a lasting impression. <br><br> Our team is dedicated to making each event one to remember, using a combination of lighting, audio, and special effects to get the crowd hyped and create the perfect vibe for any occasion. From concept to execution, we bring professional expertise to every project, making sure the event not only runs smoothly but keeps the energy up from start to finish.</p>
+								
+								<h2 class="major" id="founders">Founders</h2>
 								<div id ="Wyatt" style="display:inline-block">
 									<span class="image left"><img src="images/wyatt.jpg" alt="" /></span>
 									<h3>Wyatt</h3>
