@@ -1043,7 +1043,7 @@ input, select, textarea {
 	input[type="reset"],
 	input[type="button"],
 	button,
-	.nav {
+	button.navmajor {
 		border:none;
 		border-bottom: solid 1px #ffffff;
 		width: -moz-max-content;
