@@ -1335,9 +1335,9 @@ input, select, textarea {
 			margin: 0.25rem;
 			margin-left: auto;
 			margin-right: auto;
-			width:;
-			margin-top:-40px;
-			margin-bottom:-25%;
+			width: 5rem;
+			margin-top: -40px;
+			margin-bottom: -25%;
 		}
 
 			#header .logo .icon:before {
