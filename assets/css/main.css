@@ -1331,15 +1331,15 @@ input, select, textarea {
 			}
 		
 		#header .logo {
-			padding-bottom: 1rem;
+			padding-bottom: .75rem;
 		}
 		
 		#header .logo img {
-			width: 25em;
+			width: 20em;
 			height: 100%;
 			margin-left: auto;
 			margin-right: auto;
-			margin-top: -20%;
+			margin-top: -15%;
 		}
 
 			#header .logo .icon:before {
