@@ -1331,7 +1331,8 @@ input, select, textarea {
 			}
 
 		#header .logo img {
-			size: 1em;
+			width: 1em;
+			height: 100%;
 			margin-left: auto;
 			margin-right: auto;
 			margin-top: -20%;
