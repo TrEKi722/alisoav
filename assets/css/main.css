@@ -636,6 +636,11 @@ input, select, textarea {
 		}
 
 /* Image */
+	.imageMain {
+		size: 3rem;
+		margin: 0.5rem
+	}
+
 
 	.image {
 		border-radius: 4px;
@@ -1372,7 +1377,7 @@ input, select, textarea {
 			#header .content p {
 				text-transform: uppercase;
 				letter-spacing: 0.2rem;
-				font-size: 0.8rem;
+				font-size: 1.2rem;
 				line-height: 2;
 			}
 
@@ -1390,6 +1395,7 @@ input, select, textarea {
 
 			#header nav ul li {
 				padding-left: 0;
+				font-size: 1.2rem;
 				border-left: solid 1px #ffffff;
 			}
 
